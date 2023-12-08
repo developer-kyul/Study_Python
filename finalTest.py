@@ -107,6 +107,83 @@ range(시작번호, 끝번호, 폭)
 
 #원하는 만큼 반복하는 for문
 
+#예제1
+n=int(input('반복 횟수를 입력하세요'))
+for i in range(1, n+1):
+    print('#'*i)
+
+#예제2
+total = 0
+for i in  range(1,11):
+    total += i
+else:
+    print(f'1부터 10까의 합은 {total}입니다')
+
+#예제3
+colors ="red", "blue", "pink", "green", "yellow", "purple"
+
+for color in colors :
+    if color.startswith("p"):
+        print(color)
+else:
+    print("더이상 없음")
+
+#예제4
+color ="하양", "까망"
+taste = "달콤한", "짭짤한"
+food = "라면", "피자"
+
+for c in color: 
+    for t in  taste:
+        for f in food:
+            print(f"{c} {t} {f}")
+
+#예제5 구구단
+for i in range(2,10):
+    for j in range(1,10):
+        print(f'{i} x {j} =' , i*j)
+
+
+#예제6 윤년계산기
+leaps = []
+
+for year in range(2001,3001):
+    if year % 4 == 0 and year % 100 !=0 or year % 400 ==0:
+        leaps.append(year)
+else: 
+    print(leaps)
+
+#예제7
+salary = {
+    'david': 3000,
+    'davia': 4000,
+    'davib': 5000,
+    'davic': 6000,
+    'david': 7000,
+}
+
+for i in salary :
+    if salary[i] >= 3000:
+        print(f"{i}'s salary is {salary[i]:,}")
+
+
+#예제8
+x=('a', 'b', 'c')
+y=['i','j','k','l']
+z='12345'
+
+for t in zip(x,y,z):
+    print(t)
+
+type(zip(x,y,z)) #class zip
+
+#unzip
+x,y =zip(*k)
+
+
+
+
+
 # 시험범위 정리 12
 
 
